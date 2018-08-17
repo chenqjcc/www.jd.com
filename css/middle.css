@@ -1,0 +1,338 @@
+/* 左侧菜单 */
+.grid {
+    height: 480px;
+    background-color: ghostwhite;
+    position: relative;    
+}
+.ad-l {
+    display: block;
+    width: 360px;
+    height: 480px;
+    /* background-color: purple; */
+    background: url(../images/qixi.png) no-repeat;
+    position: absolute;
+    top: 0px;
+    left: -363px;
+    float: left;
+}
+.ad-r {
+    display: block;
+    width: 360px;
+    height: 480px;
+    /* background-color: purple; */
+    background: url(../images/qixi.png) no-repeat;
+    background-position: -1550px 0px;
+    position: absolute;
+    top: 7px;
+    left: 1192px;
+    float: right;
+}
+.grid-col1 {
+    width: 190px;
+    height: 100%;
+    background-color: #6e6568;
+    color: #fff;
+    font-size:16px;   /* 给/设置字体大小 */
+}
+.grid-col1  a {
+    color: #FFF;
+    font-size: 16px;     /*  这个大小是给字的 */
+    margin-right: 0px 3px;        /* a标签之间的间距 */
+}
+.grid-col1 ul {
+    padding: 20px 0px;
+}
+.grid-col1 ul li {
+    padding-left: 12px;    /* 这里只能用padding，因为下面的background只影响padding，不影响margin */
+    height: 29px;
+    line-height: 29px;
+}
+.grid-col1 ul li a:hover {
+    color: #ff1100;
+}
+/* 大图片部分 */
+.grid-col2 {
+    width: 800px;
+    height: 480px;   
+}
+.grid-col2-l {
+    float: left; 
+    margin: 9px 5px 0px 8px;
+    position: relative;         /* 为下面的箭头部分 */
+} 
+.grid-col2-r {
+    height: 160px;
+}
+.grid-col2-r img {
+    margin-bottom: 4px;
+}
+.grid-col2-r img:nth-child(1) {
+    margin-top: 9px;
+}
+
+
+/* 箭头部分 */
+.arrow-l,
+.arrow-r {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    background: rgba(0,0,0,0.3);
+    transform: translateY(-50%);         /* 上移动元素高度的一半 */
+    text-align: center;        /* 箭头水平对齐 */
+    line-height: 60px;         /* 箭头居中对齐 */
+    font-size: 20px;
+    color: rgba(255,255,255,0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.arrow-r {
+    right: 0;        /* a链接需要用right，而不是float */ 
+}
+/* cricle循环 */
+.circle {
+    width: 175px;
+    height: 20px;
+    background: rgba(255,255,255,.3);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;             /* 大图中的小图片默认下往下排列的，所以要加bottom定位 */
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+.circle li {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+    list-style: none;       /* 去除列表的序号小点 */
+}
+.circle .current {
+    background-color: #ff1100;
+}
+
+/* 菜单最右侧  顶盒 */
+.grid-col3 {
+    width: 195px;
+    height: 100%;
+    padding-top: 8px;
+}
+.user-info {    
+    height: 159px;
+    width: 195px;
+    border: 1px solid #ccc;
+    padding-top: 10px;
+}
+.user-info .touxiang {
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 40%;
+    box-shadow: 0px 0px 40px #000;
+    overflow: hidden;
+    border: 2px solid 
+}
+.user-info .touxiang img {
+    display: block;
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+}
+.user-info .welcome p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #6e6568;
+    padding-top: -20px;
+    width: 120px;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin: 0 auto;
+    padding-left: 20px;
+}
+.user-info .welcome div {
+    padding: 0 40px;
+    height: 20px;
+    line-height: 20px;
+}
+.user-info .welcome div a:nth-child(1) {
+    display: block;
+    float: left;
+    background-color: brown;
+    border-radius: 8px;
+    text-align: center;
+    width: 50px;
+}
+.user-info .welcome div a:nth-child(2) {
+    display: block;
+    float: right;
+    background-color: burlywood;;
+    border-radius: 8px;
+    text-align: center;
+    width: 50px;
+}
+.user-info .newlike {
+    padding: 5px 0px 0px 24px;
+
+}
+.user-info .newlike a {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;           /* 包含内容的需要用line-height来居中 */
+    font-size: 15px;
+    box-shadow: 5px 5px 50px #6e6568;
+}
+.user-info .newlike a:nth-child(1) {
+    background-color: #fff;
+    color: #f10;
+    border-radius: 5px;
+}
+.user-info .newlike a:nth-child(2) {
+    background-color: black;
+    color: #6e6568; 
+    border-radius: 5px;
+    
+}
+.user-info .newlike a:nth-child(1):hover {
+    background-color: #f10;
+    color: #000;
+}
+.user-info .newlike a:nth-child(2):hover {
+    background-color: red;
+    color: #FFF;
+}
+/* 菜单最右侧 中盒 */
+.news {
+    height: 147px;
+    border-bottom: 1px solid purple;
+    padding: 7px 13px 0px;
+    box-sizing: border-box;
+}
+.news-t {
+    height: 19px;
+    border-bottom: 1px solid #ccc;
+}
+.news-t a {
+    float: left;
+    display: block;
+    width: 25px;
+    height: 19px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    color: #6e6568;
+    margin: 0 auto;
+}
+.news-t span {
+    margin: 0px 5px 0px;
+    display: block;
+    float: left;
+    font-size: 15px;
+    color: #ccc;
+}
+.news-t a:nth-child(1) {
+    margin-right: 15px;
+}
+
+.news-t .gg {
+    margin-left: 15px;
+}
+.news-t .more {
+    float: right;
+}
+.news-t a:nth-child(1) {
+    border-bottom: 2px solid red;    
+}
+.news-b {
+    padding-top: 15px;
+}
+.news-b li {
+    line-height: 21px;
+}
+.expand {
+    height: 149px;
+    width: 195px;
+    overflow: hidden;         /* 这里要设置隐藏，就先要设置盒子的宽度 */
+    display: block;
+    margin-top: 3px;
+    position: absolute;
+    margin-left: -3px;
+    margin-right: -3px;
+    overflow: hidden;
+}
+.expand ul {
+    width: 210px;        /* li放在ul里面，如果li的宽度小于210就不会下溢 */    
+}
+.expand li {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 49px;
+    height: 50px;
+    float: left;
+    background-color: #fff;
+    box-sizing: border-box;    
+}
+.expand li a {
+    display: block;
+    line-height: 18px;
+    width: 49px;
+    height: 50px;
+    text-align: center;
+}
+.expand li i {
+    display: block;
+    background: url(../images/huafei.png) no-repeat;
+    margin: 0 auto;
+    margin-top: 3px;
+    width: 23px;
+    height: 25px; 
+}
+.expand li:nth-child(1) i {    
+    background-position: -8px -8px;
+}
+.expand li:nth-child(2) i {    
+    background-position: -47px -8px;
+}
+.expand li:nth-child(3) i {    
+    background-position: -93px -8px;
+}
+.expand li:nth-child(4) i {    
+    background-position: -135px -8px;
+}
+.expand li:nth-child(5) i {    
+    background-position: -8px -63px;
+}
+.expand li:nth-child(6) i {    
+    background-position: -8px -8px;
+}
+.expand li:nth-child(7) i {    
+    background-position: -8px -8px;
+}
+.expand li:nth-child(8) i {    
+    background-position: -8px -8px;
+}
+.expand li:nth-child(9) i {    
+    background-position: -8px -8px;
+}
+.expand li:nth-child(10) i {    
+    background-position: -8px -8px;
+}
+.expand li:nth-child(11) i {    
+    background-position: -8px -8px;
+}
+.expand li:nth-child(12) i {    
+    background-position: -8px -8px;
+}
